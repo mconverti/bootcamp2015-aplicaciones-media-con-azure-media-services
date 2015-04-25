@@ -47,8 +47,8 @@
 
                 IMediaProcessor azureMediaIndexer = context.MediaProcessors.GetLatestMediaProcessorByName("Azure Media Indexer");
                 ITask indexingTask = job.Tasks.AddNew("Indexing Task", azureMediaIndexer, Resources.IndexerPreset, TaskOptions.None);
-                encodingTask.InputAssets.Add(inputAsset);
-                encodingTask.OutputAssets.AddNew("Indexer Result Asset", AssetCreationOptions.None);
+                indexingTask.InputAssets.Add(inputAsset);
+                indexingTask.OutputAssets.AddNew("Indexer Result Asset", AssetCreationOptions.None);
 
                 Console.WriteLine("Submitting transcoding job...");
 
