@@ -87,7 +87,8 @@
 
                 // 6. [Dynamic Packaging] Generate the Smooth Streaming, HLS and MPEG-DASH URLs for adaptive streaming
                 Uri smoothStreamingUri = multibitrateOutputAsset.GetSmoothStreamingUri();
-                Uri hlsUri = multibitrateOutputAsset.GetHlsUri();
+                Uri hlsv4Uri = multibitrateOutputAsset.GetHlsUri();
+                Uri hlsv3Uri = multibitrateOutputAsset.GetHlsv3Uri();
                 Uri mpegDashUri = multibitrateOutputAsset.GetMpegDashUri();
 
                 // 7. Generate SAS URL for progressive download.
@@ -95,7 +96,8 @@
 
                 // 8. Get the asset URLs.
                 Console.WriteLine(smoothStreamingUri);
-                Console.WriteLine(hlsUri);
+                Console.WriteLine(hlsv4Uri);
+                Console.WriteLine(hlsv3Uri);
                 Console.WriteLine(mpegDashUri);
                 mp4ProgressiveDownloadUris.ForEach(uri => Console.WriteLine(uri));
 
