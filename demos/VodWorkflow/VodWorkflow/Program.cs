@@ -67,18 +67,14 @@
                 IAsset multibitrateOutputAsset = job.OutputMediaAssets[0];
                 IAsset indexerResultOutputAsset = job.OutputMediaAssets[1];
 
-                Console.WriteLine("Publishing output asset...");
+                Console.WriteLine("Creating key authorization policy and delivery policy...");
 
                 // 4. [Dynamic Encryption] Configure Key Authorization Policy and Asset Delivery Policy
                 IContentKey key = CreateEnvelopeTypeContentKey(context, multibitrateOutputAsset);
-                Console.WriteLine("Created key {0} for the asset {1} ", key.Id, multibitrateOutputAsset.Id);
-                Console.WriteLine();
-
                 AddOpenRestrictedAuthorizationPolicy(context, key);
-                Console.WriteLine("Added authorization policy: {0}", key.AuthorizationPolicyId);
-                Console.WriteLine();
-
                 CreateAssetDeliveryPolicy(context, multibitrateOutputAsset, key);
+
+                Console.WriteLine("Publishing output asset...");
 
                 // 5. Publish the output asset by creating an Origin locator for adaptive streaming, and a SAS locator for progressive download.
                 context.Locators.Create(LocatorType.OnDemandOrigin, multibitrateOutputAsset, AccessPermissions.Read, TimeSpan.FromDays(30));
