@@ -117,7 +117,7 @@
                         Console.WriteLine("Downloading '{0}' - Progress: {1:0.##}%", af.Name, p.Progress);
                     });
 
-                Console.WriteLine("Output asset files available at '{0}'.", Path.GetFullPath(outputFolder));
+                Console.WriteLine("Indexer output files available at '{0}'.", Path.GetFullPath(outputFolder));
 
                 Console.WriteLine("VOD workflow finished.");
             }
@@ -180,7 +180,6 @@
             // Add ContentKeyAutorizationPolicy to ContentKey
             contentKey.AuthorizationPolicyId = policy.Id;
             IContentKey updatedKey = contentKey.UpdateAsync().Result;
-            Console.WriteLine("Adding content key to asset");
         }
 
         private static void CreateAssetDeliveryPolicy(MediaContextBase context, IAsset asset, IContentKey key)
@@ -206,9 +205,6 @@
 
             // Add AssetDelivery Policy to the asset
             asset.DeliveryPolicies.Add(assetDeliveryPolicy);
-
-            Console.WriteLine();
-            Console.WriteLine("Adding asset delivery policy");
         }
     }
 }
