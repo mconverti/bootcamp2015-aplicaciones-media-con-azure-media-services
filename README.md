@@ -14,3 +14,20 @@ Detalles de la charla:
 ####Presentadores
 - [Mariano Vazquez](https://twitter.com/marianodvazquez), [Southworks SRL](http://southworks.com/)
 - [Mariano Converti](https://twitter.com/mconverti), [Southworks SRL](http://southworks.com/)
+
+####Recursos
+- Documentación Oficial: http://azure.microsoft.com/develop/media-services/
+- Blogs
+ - John Deutscher: http://johndeutscher.com/
+ - Mingfei Yan: http://mingfeiy.com/
+ - George Trifonov: http://www.gtrifonov.com/
+ - Mariano Converti: http://southworks.com/blog/author/mconverti/
+- Novedades y Anuncios: http://azure.microsoft.com/blog/topics/media-services/
+- Precios: http://azure.microsoft.com/pricing/details/media-services/
+- NuGet Packages
+ - .NET SDK: https://www.nuget.org/packages/windowsazure.mediaservices/
+ - .NET SDK Extensions: https://www.nuget.org/packages/windowsazure.mediaservices.extensions/
+- Source Code
+ - .NET SDK: https://github.com/Azure/azure-sdk-for-media-services/
+ - .NET SDK Extensions: https://github.com/Azure/azure-sdk-for-media-services-extensions/
+ - Ejemplos: https://github.com/AzureMediaServicesSamples/
